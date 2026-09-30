@@ -37,7 +37,7 @@ pyrag/
 运行后会自动生成以下内容（已在 `.gitignore` 中忽略）：
 
 - `chroma_db/`：向量库数据
-- `md5.text`：已入库内容的 MD5 记录，用于避免重复上传
+- `md5.txt`：已入库内容的 MD5 记录，用于避免重复上传
 - `chat_history/`：按会话保存的聊天记录
 
 ## 快速开始
@@ -95,6 +95,6 @@ streamlit run app_qa.py
 
 ## 注意事项
 
-- `chroma_db/` 和 `md5.text` 要一起删除或一起保留。只删向量库、保留 `md5.text`，会导致重新上传时被误判为"已存在"而跳过。
-- 更换 `embedding_model_name` 后需要清空 `chroma_db/` 和 `md5.text` 重新上传，不同模型生成的向量不能混用。
+- `chroma_db/` 和 `md5.txt` 要一起删除或一起保留。只删向量库、保留 `md5.txt`，会导致重新上传时被误判为"已存在"而跳过。
+- 更换 `embedding_model_name` 后需要清空 `chroma_db/` 和 `md5.txt` 重新上传，不同模型生成的向量不能混用。
 - 目前所有用户共用同一个会话 ID（`user_01`），聊天记录会互相叠加。
